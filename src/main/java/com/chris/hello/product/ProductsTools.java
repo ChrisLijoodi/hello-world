@@ -17,18 +17,18 @@ public class ProductsTools {
         this.productService = productService;
     }
 
-    @McpTool(name = "products", description = "various insurance products")
+    @McpTool(name = "get-products", description = "various insurance products")
     public List<Product> getAllProducts() {
         return productService.getAllProducts();
     }
 
-    @McpTool(name = "product", description = "an insurance product")
+    @McpTool(name = "get-product", description = "an insurance product")
     public Product getProduct(@McpToolParam(description = "the name of the product")
                                     String name) {
         return productService.getProduct(name);
     }
 
-    @McpTool(name = "create product", description = "creates a new insurance product")
+    @McpTool(name = "create-product", description = "creates a new insurance product")
     public String createProduct(@McpToolParam(description = "record of product")
                               Product newProduct) {
         productService.createProduct(newProduct);
